@@ -65,3 +65,30 @@ gem 'paperclip'
 gem 'aws-sdk'
 gem 'asset_sync'
 gem 'mailjet'
+group :development do
+  gem 'capistrano'
+  gem 'capistrano-rails'
+  gem 'launchy'
+  gem 'letter_opener'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'rubocop'
+  gem 'timecop'
+end
+
+group :test do
+  gem 'shoulda-matchers'
+  gem 'rspec-mocks'
+  gem 'faker'
+  gem 'minitest'
+  gem 'webmock'
+end
+
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'factory_girl'
+  gem 'database_cleaner'
+  gem 'simplecov', require: false
+  gem 'quiet_assets'
+  gem 'pry'
+end

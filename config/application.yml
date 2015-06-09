@@ -1,4 +1,8 @@
 default: &default
+mailjet_api_key: 'test'
+mailjet_secret_key: 'test'
+mailjet_default_from: 'my_service <noreply@my_service.com>'
+
 
 development:
   <<: *default

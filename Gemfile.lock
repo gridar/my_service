@@ -43,6 +43,7 @@ GEM
     builder (3.2.2)
     byebug (5.0.0)
       columnize (= 0.9.0)
+    cancancan (1.9.2)
     celluloid (0.16.0)
       timers (~> 4.0.0)
     coffee-rails (4.1.0)
@@ -62,6 +63,8 @@ GEM
       responders
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
+    devise-async (0.9.0)
+      devise (~> 3.2)
     devise-i18n (0.11.3)
     devise-i18n-views (0.3.2)
     erubis (2.7.0)
@@ -175,8 +178,10 @@ PLATFORMS
 
 DEPENDENCIES
   byebug
+  cancancan
   coffee-rails (~> 4.1.0)
   devise
+  devise-async
   devise-i18n
   devise-i18n-views
   jbuilder (~> 2.0)

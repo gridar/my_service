@@ -1,4 +1,12 @@
 Rails.application.configure do
+  # Host assets on s3
+  config.paperclip_defaults = {
+    storage: :s3,
+    s3_credentials: SETTINGS['paperclip'],
+    s3_protocol: '',
+    url: ':s3_domain_url',
+    path: '/system/:class/:attachment/:id_partition/:style/:filename'
+  }
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.

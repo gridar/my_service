@@ -45,3 +45,4 @@ end
 
 
 gem 'pg'
+gem 'rails-i18n'

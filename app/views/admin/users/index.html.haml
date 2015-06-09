@@ -1,0 +1,16 @@
+%table.table.table-striped#users
+  %thead
+    %tr
+      %th= sort_link(@q, :email)
+      %th= sort_link(@q, :created_at)
+      %th Role
+  %tbody
+    - @users.each do |user|
+      %tr
+        %td
+          = user.email
+        %td
+          = l user.created_at
+        %td
+          = user.roles.first.name unless user.roles.first.nil?
+= paginate @users
